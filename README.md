@@ -1,19 +1,12 @@
-# Svelte Example
+# Safe To Stream
 
-This directory is a brief example of a [Svelte](https://svelte.dev/) app with [Serverless Functions](https://vercel.com/docs/v2/serverless-functions/introduction) that can be deployed with Vercel and zero configuration.
+[safeto.stream] is a Svelte based Website made by [Lio].
 
-## Deploy Your Own
+It'll list DMCA Free Music provided by the Musicians themselves or their Listeners.
+It's made for Streamers and Content Creators alike.
 
-Deploy your own Svelte project, along with Serverless Functions, with Vercel.
+It's hosted on [vercel] 💖
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/vercel/tree/master/examples/svelte)
-
-_Live Example: https://svelte.now-examples.now.sh_
-
-### How We Created This Example
-
-To get started with Svelte, along with [Serverless Functions](https://vercel.com/docs/v2/serverless-functions/introduction), deployed with Vercel, you can use [degit](https://github.com/Rich-Harris/degit) to initialize the project:
-
-```shell
-$ npx degit sveltejs/template my-svelte-project
-```
+[safeto.stream]: https://safeto.stream
+[lio]: https://himbo.cat
+[vercel]: https://vercel.app
