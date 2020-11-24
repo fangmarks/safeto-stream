@@ -1,0 +1,26 @@
+[
+  {
+    "title": "TWITCH FRIENDLY MUSIC",
+    "by": "Rob",
+    "by_link": "https://twitter.com/robgassermusic",
+    "image": "/assets/music/rob-tfm.jpg",
+    "link": "fanlink.to/rgtwitch",
+    "redirect": "https://fanlink.to/rgtwitch"
+  },
+  {
+    "title": "NIGHTMODE",
+    "by": "NIGHTMODE",
+    "by_link": "https://twitter.com/NIGHTMODE",
+    "image": "/assets/music/nightmode.jpg",
+    "link": "safeto.stream/nightmode",
+    "redirect": "https://safeto.stream/nightmode"
+  },
+  {
+    "title": "Monstercat Gold",
+    "by": "Monstercat",
+    "by_link": "https://monstercat.com",
+    "image": "/assets/music/monstercat.jpg",
+    "link": "monstercat.com/gold",
+    "redirect": "https://monstercat.com/gold"
+  }
+]
