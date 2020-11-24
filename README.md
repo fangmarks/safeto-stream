@@ -1,4 +1,4 @@
-# Safe To Stream
+# Safe To Stream by [Lio]
 
 [safeto.stream] is a Svelte based Website made by [Lio].
 
