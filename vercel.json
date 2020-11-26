@@ -6,6 +6,11 @@
       "permanent": false
     },
     {
+      "source": "/burningred",
+      "destination": "https://open.spotify.com/playlist/7rIDO7jqjBxaAqwPVGguZl?si=oby4iC26Tj6WyhxNV59g5w",
+      "permanent": false
+    },
+    {
       "source": "/discord",
       "destination": "https://discord.gg/5wnjjsDtzK",
       "permanent": false

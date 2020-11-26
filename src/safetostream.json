@@ -30,5 +30,13 @@
     "image": "/assets/music/soundtrack_beta.png",
     "link": "twitch.tv/soundtrack",
     "redirect": "https://twitch.tv/soundtrack"
+  },
+  {
+    "title": "Burning Red™ Discography",
+    "by": "Burning Red™",
+    "by_link": "https://officialburningred.com",
+    "image": "/assets/music/burningred.jpg",
+    "link": "safeto.stream/burningred",
+    "redirect": "https://safeto.stream/burningred"
   }
 ]
