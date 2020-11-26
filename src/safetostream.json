@@ -8,7 +8,7 @@
     "redirect": "https://fanlink.to/rgtwitch"
   },
   {
-    "title": "NIGHTMODE",
+    "title": "NIGHTMODE Discography",
     "by": "NIGHTMODE",
     "by_link": "https://twitter.com/NIGHTMODE",
     "image": "/assets/music/nightmode.jpg",
@@ -22,5 +22,13 @@
     "image": "/assets/music/monstercat.jpg",
     "link": "monstercat.com/gold",
     "redirect": "https://monstercat.com/gold"
+  },
+  {
+    "title": "Soundtrack (Beta)",
+    "by": "Twitch",
+    "by_link": "https://twitch.tv",
+    "image": "/assets/music/soundtrack_beta.png",
+    "link": "twitch.tv/soundtrack",
+    "redirect": "https://twitch.tv/soundtrack"
   }
 ]
