@@ -1,0 +1,37 @@
+---
+import type { GetStaticPaths } from "astro";
+import { api, type Sub } from "../../lib/noco";
+// export const getStaticPaths = (() => {
+//   // let grabbed;
+
+//     .then((links) => {
+//       return (links.list as Sub[]).map((link) => {
+//         return {
+//           params: { link: link.sts_link },
+//           props: { link: link.link },
+//         };
+//       });
+//     });
+// }) satisfies GetStaticPaths;
+
+const { link } = Astro.params;
+
+const dbLink = (await api.dbViewRow.list(
+  "noco",
+  "pur69iihx0637uv",
+  "muud0g3x8455t8i",
+  "vwt9r80l9z9u0ohw",
+  {
+    offset: 0,
+    where: `(sts_link,eq,${link})~and((sts_link,isnot,null)~or(sts_link,isnot,empty))`,
+  }
+)).list as Sub[]
+
+console.log(dbLink)
+
+const red = dbLink[0].link;
+
+return Astro.redirect(red);
+---
+
+You should get redirected in a second.

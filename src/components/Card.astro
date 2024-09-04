@@ -1,0 +1,104 @@
+---
+import { Image } from "astro:assets";
+import Badge from "./Badge.astro";
+
+interface Props {
+  title: string;
+  artist: string;
+  href: string;
+  badges: string;
+  link: string;
+  cover: {
+    url: string;
+    title: string;
+    mimetype: string;
+    size: number;
+  }[];
+}
+
+const {
+  href: shref,
+  title,
+  badges,
+  cover,
+  link: STSLink,
+  artist
+} = Astro.props;
+
+const link = () => {
+  if (STSLink) return `safeto.stream/at/${STSLink}`;
+  else return shref.replace("https://", "");
+};
+const href = () => {
+  if (STSLink) return `https://safeto.stream/at/${STSLink}`;
+  else return shref as string;
+};
+---
+
+<li class="link-card">
+  <a href={href()}>
+    {
+      cover && (
+        <Image
+          class={"cover max-h-16 max-w-16 md:max-h-28 md:max-w-28"}
+          src={cover[0].url}
+          loading="eager"
+          alt={""}
+          inferSize={true}
+        />
+      )
+    }
+    <div class="text text-xs md:text-sm flex flex-col">
+      <span class="font-bold text-lg">
+        {title}
+      </span>
+      <span class="text-base font-semibold">
+        {artist}
+      </span>
+      <span class="text-xs lg:text-sm">
+        {link}
+      </span>
+      <div class="flex flex-row flex-wrap">
+        {badges && badges.split(",").map((badge) => <Badge usable={badge} />)}
+      </div>
+    </div>
+    <span class="arrow absolute top-[50%] right-[5%]">
+      {"->"}
+    </span>
+  </a>
+</li>
+
+<style lang="sass">
+  // *
+  //   padding: 0
+  //   margin: 0
+
+  .arrow
+    position: absolute
+    transform: translate(-50%, -50%)
+    font-size: x-large
+
+  .cover
+    border-radius: 0.5rem
+    object-fit: cover
+    border: var(--border-size) solid var(--border-color)
+
+  .link-card
+    position: relative
+    background-image: none
+    & > .text
+      display: flex
+
+  .text
+    margin: auto 2rem
+
+  .link-card > a
+    width: 100%
+    text-decoration: none
+    padding: calc(1rem - 1px)
+    display: inline-flex
+    color: var(--text-color)
+    border-left: var(--border-size) solid var(--border-color)
+    border-right: var(--border-size) solid var(--border-color)
+    border-bottom: var(--border-size) solid var(--border-color)
+</style>

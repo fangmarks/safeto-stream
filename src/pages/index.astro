@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import { type Sub, api } from "../lib/noco";
+// export const prerender = true;
+
+const items = await (
+  await api.dbViewRow.list(
+    "noco",
+    "pur69iihx0637uv",
+    "muud0g3x8455t8i",
+    "vwt9r80l9z9u0ohw",
+    {
+      where: "(shown,isnot,false)",
+    }
+  )
+).list as unknown as Sub[];
+
+// console.log(items)
+
+---
+
+<Layout title="Safe to Stream">
+  <main>
+    <p>
+      <strong>safeto.stream</strong> provides a List of Albums, Discographies, Playlists,
+      etc. that you can use in your Content on Twitch, Youtube, or Tiktok!
+      <br />
+      <br />
+      
+      <a href="/why">Why was this made?</a>
+      
+      <br />
+      <br />
+      Want to be on this Site? Click the Form Link at the Top to fill out our Form
+    </p>
+
+    <p>
+      Some Submissions might require a Separate License, an Agreement, or
+      similar. Cases like that will be mentioned in a Badge in the Submission.
+    </p>
+
+    <ul>
+      {
+        items.map((item) => (
+          <Card
+            title={item.title}
+            artist={item.artist}
+            href={item.link}
+            badges={item.usable}
+            cover={item.cover}
+            link={item.sts_link}
+          />
+        ))
+      }
+    </ul>
+  </main>
+</Layout>
+
+<style lang="sass">
+  main
+    background-color: var(--page-color)
+</style>
