@@ -1,0 +1,103 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+import Navbar from "../components/Navbar.astro";
+import Themes from "astro-themes";
+import Umami from "../components/Umami.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- SEO -->
+    <meta name="”robots”" content="index, follow" />
+
+    <meta property="og:title" content="Safe to Stream" />
+    <meta property="og:description" content="List of DMCA Free Music" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://safeto.stream" />
+    <meta content="#ffffff" name="theme-color" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <Themes />
+    <Umami />
+  </head>
+  <body>
+    <main class="main">
+      <Navbar />
+      <slot />
+      <footer>
+        <p>©️ 2024 safeto.stream</p>
+      </footer>
+    </main>
+    <style is:global>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap");
+      :root {
+        --border-color: #181717cc;
+        --text-color: black;
+        --background-color: #e4e0dc;
+        --page-color: #ffffff;
+        --border-size: 1px;
+      }
+
+      :root[data-theme="dark"] {
+        --border-color: #f2f0ed99;
+        --text-color: white;
+        --background-color: #171616;
+        --page-color: #0d0c0c;
+      }
+
+      a {
+        color: crimson;
+      }
+
+      a:visited {
+        color: crimson;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      p {
+        color: var(--text-color);
+        padding: 1rem;
+        border-left: var(--border-size) solid var(--border-color);
+        border-right: var(--border-size) solid var(--border-color);
+        border-bottom: var(--border-size) solid var(--border-color);
+      }
+
+      main.main {
+        max-width: 90%;
+        margin: auto;
+        background-color: var(--page-color);
+      }
+
+      html {
+        font-family: "Inter", system-ui, sans-serif;
+      }
+
+      body {
+        background-color: var(--background-color);
+      }
+      code {
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
+      }
+    </style>
+  </body>
+</html>

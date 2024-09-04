@@ -1,0 +1,38 @@
+---
+const { usable } = Astro.props;
+
+const badge = () => {
+  switch (usable) {
+    case "twitch":
+      return "Twitch";
+    case "yt_vids":
+      return "Youtube Videos";
+    case "yt_streams":
+      return "Youtube Streams";
+    case "yt_license":
+      return "Youtube needs separate License";
+    case "details_site":
+      return 'Details in Link'
+    case "tiktok":
+      return 'Tiktok'
+    case "tiktok_special":
+      return 'Tiktok needs separate License'
+    case "everywhere":
+      return 'Usable Everywhere'
+    default:
+      return usable;
+  }
+};
+---
+
+<span class={`${usable} text-xs mt-4 mr-0 sm:mr-4`}>
+  {badge}
+</span>
+
+<style>
+  span {
+    padding: 0.1rem 0.5rem;
+    border-radius: 0.25rem;
+    border: var(--border-size) solid var(--border-color);
+  }
+</style>

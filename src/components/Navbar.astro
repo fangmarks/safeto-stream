@@ -1,0 +1,29 @@
+---
+import ThemeSwitcher from "./ThemeSwitcher";
+---
+
+<nav>
+  <div>
+    <header class="flex items-center justify-between h-12 px-4 md:px-6 header">
+      <a class="flex items-center gap-2" href="/">
+        <span class="text-lg font-bold lettering">safeto.stream</span>
+      </a>
+      <div class="flex">
+        <a class="flex items-center gap-2 mr-4" href="/form">
+          <span class="text-lg font-bold lettering">Form</span>
+        </a>
+        <ThemeSwitcher client:only="react" />
+      </div>
+    </header>
+  </div>
+</nav>
+
+<style>
+  .lettering {
+    color: var(--text-color);
+  }
+  nav {
+    border: var(--border-size) solid var(--border-color);
+    margin-top: 1rem;
+  }
+</style>
