@@ -16,18 +16,20 @@ import { api, type Sub } from "../../lib/noco";
 
 const { link } = Astro.params;
 
-const dbLink = (await api.dbViewRow.list(
-  "noco",
-  "pur69iihx0637uv",
-  "muud0g3x8455t8i",
-  "vwt9r80l9z9u0ohw",
-  {
-    offset: 0,
-    where: `(sts_link,eq,${link})~and((sts_link,isnot,null)~or(sts_link,isnot,empty))`,
-  }
-)).list as Sub[]
+const dbLink = (
+  await api.dbViewRow.list(
+    "noco",
+    "ppil4p2uzrgcchu",
+    "mc42lnm8ta6or5b",
+    "vwmqs7ymguw0xx2j",
+    {
+      offset: 0,
+      where: `(sts_link,eq,${link})~and((sts_link,isnot,null)~or(sts_link,isnot,empty))`,
+    }
+  )
+).list as Sub[];
 
-console.log(dbLink)
+console.log(dbLink);
 
 const red = dbLink[0].link;
 

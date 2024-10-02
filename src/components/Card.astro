@@ -9,10 +9,7 @@ interface Props {
   badges: string;
   link: string;
   cover: {
-    url: string;
-    title: string;
-    mimetype: string;
-    size: number;
+  signedPath: string;
   }[];
 }
 
@@ -24,6 +21,8 @@ const {
   link: STSLink,
   artist
 } = Astro.props;
+
+console.log(cover)
 
 const link = () => {
   if (STSLink) return `safeto.stream/at/${STSLink}`;
@@ -41,7 +40,7 @@ const href = () => {
       cover && (
         <Image
           class={"cover max-h-16 max-w-16 md:max-h-28 md:max-w-28"}
-          src={cover[0].url}
+          src={`https://nocodb-ewkss0gkkockggc4g0wgko80.implant.cam/${cover[0].signedPath}`}
           loading="eager"
           alt={""}
           inferSize={true}
