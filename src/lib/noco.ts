@@ -16,7 +16,7 @@ export type Sub = {
 };
 
 export const api = new Api({
-  baseURL: "https://noco.lio.systems",
+  baseURL: "https://nocodb-ewkss0gkkockggc4g0wgko80.implant.cam",
   headers: {
     "xc-token": import.meta.env.XC_AUTH,
   },
