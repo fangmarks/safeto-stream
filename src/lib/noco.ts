@@ -6,10 +6,7 @@ export type Sub = {
   artist: string;
   sts_link: string;
   cover: {
-    url: string;
-    title: string;
-    mimetype: string;
-    size: number;
+    signedPath: string;
   }[];
   usable: string;
   shown: boolean;
