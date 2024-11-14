@@ -22,8 +22,6 @@ const {
   artist
 } = Astro.props;
 
-console.log(cover)
-
 const link = () => {
   if (STSLink) return `safeto.stream/at/${STSLink}`;
   else return shref.replace("https://", "");
