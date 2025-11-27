@@ -7,6 +7,7 @@ const { title } = Astro.props;
 import Navbar from "../components/Navbar.astro";
 import Themes from "astro-themes";
 import Umami from "../components/Umami.astro";
+const date = new Date().getFullYear()
 ---
 
 <!doctype html>
@@ -33,7 +34,7 @@ import Umami from "../components/Umami.astro";
       <Navbar />
       <slot />
       <footer>
-        <p>©️ 2024 safeto.stream</p>
+        <p>©️ {date} safeto.stream</p>
       </footer>
     </main>
     <style is:global>
